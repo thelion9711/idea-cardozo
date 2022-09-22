@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:"serpandmolot" ;
+    src: url(../media/fuentes/Serp\ And\ Molot.ttf);
+} 
+@font-face {
+    font-family:"daiger" ;
+    src: url(../media/fuentes/zodiackey.ttf);
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: black;
+    background-image: linear-gradient(150deg, rgba(0,0,0,1) 0%, rgba(32,18,18,1) 48%, rgba(175,10,10,1) 73%, rgba(255,0,0,1) 100%);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) ;
+    grid-template-areas:"header header header"
+                        "main main main"
+                        "footer footer footer" ;
+}
+
+header nav{
+    height: 10vh;
+    width: 100vw;   
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: 1fr ;
+    grid-template-areas:"logo1 imgp logo2";
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    text-align: center
+}
+li { 
+    display:inline-block;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+#logo-uno{
+    height: 100px;
+    width: 130px;
+    grid-area:logo1 ;
+    margin-top: 0;
+    float:left ;
+}   
+label{
+    color: white;
+}
+legend{
+    color: white;
+}
+#logo-dos{
+    height: 100px;
+    width: 130px;
+    grid-area:logo2 ;
+    margin-top: 0;
+    float: right;
+}
+#titulo-principal{
+    color: white;
+    text-align: center;
+    grid-area:imgp ;
+}
+main{
+    height: 80vh;
+    width: 100vw;
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+tr{
+    color: white;
+    
+}
+.section-de-imagenes{
+    margin-top: 50px;
+}
+
+#texto-section{
+    height: 500px;
+    color: white;
+    max-width: 50vw;
+
+}
+#img-section{   
+    max-width: 50vw;
+}
+.img-de-la-section{
+    height: 500px;
+}
+
+.imagen-con-shadow{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.99);
+    height: 500px;
+}
+.videos{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.99);
+    height: 500px;
+
+}
+.titulo-de-planes{
+    color: white;
+}
+footer{
+    background-image: url(../media/imagenes/imagen\ de\ footer.png);
+    background-size:contain;
+    height: 10vh;
+    width: 100vw;
+    grid-area: footer;
+}
+#logo-tres{
+    height: 100px;
+    width: 130px;
+    grid-area:logo1 ;
+    margin-top: 0;
+    float:left ;
+
+}
+#logo-cuatro{
+    height: 100px;
+    width: 130px;
+    grid-area:logo2 ;
+    margin-top: 0;
+    float: right;
+}
+
+   /* DESKTOP FIRST  */
+
+   @media only screen and (max-width: 1200px) {
+    body{
+        background-color: black;
+    }       
+    #texto-section{
+        max-width: 50vh;
+        margin-top: 50px;
+    
+        }
+    #img-section{
+        max-width: 50vh;
+        margin-top: 50px;
+       
+        }
+        .img-de-la-section{
+            height: 280px;
+        }
+}
+@media screen and (max-width: 768px) {
+    body{
+        background-color: black;
+    }    
+    #texto-section{
+        max-width: 400px;
+        margin-top: 50px;
+        margin-bottom: -170px;
+        }
+    #img-section{
+        max-width: 400px;
+        margin-top: 50px;
+        }
+        .img-de-la-section{
+            height: 280px;
+        }
+}
+@media only screen and (max-width: 480px){
+    body{
+        background-color: black;
+    }
+    #texto-section{
+       margin-top: 60px;
+       max-width: 300px;
+       margin-bottom: -100px;
+    }
+    
+    #img-section{
+    max-width: 300px;
+    }
+    .img-de-la-section{
+        height: 240px;
+       
+       
+    }
+    
+
+}
+    
+   
